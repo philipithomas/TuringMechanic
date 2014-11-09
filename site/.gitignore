@@ -1,0 +1,8 @@
+Gemfile.lock
+*.swp
+*~
+_site/
+.bundle/
+.ruby-version
+.sass-cache
+_drafts/
