@@ -11,4 +11,4 @@ cd ..
 
 # if branch master - deploy
 
-echo "Go-Rithm Build Complete"
+echo "Turing Mechanic Build Complete"
