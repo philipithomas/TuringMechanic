@@ -2,7 +2,9 @@ exclude: [
     'config.yml',
     'vendor', # CircleCI-specific bug
     'Gemfile*',
-    '*.sh'
+    '*.sh',
+    'README.md',
+
 ]
 
 highlighter: pygments
