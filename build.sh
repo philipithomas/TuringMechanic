@@ -11,6 +11,4 @@ cd site
 ./build.sh
 cd ..
 
-# TODO - if branch master - deploy
-
 echo "Turing Mechanic Build Complete"
