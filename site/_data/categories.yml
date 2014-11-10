@@ -1,0 +1,7 @@
+- name: Project Euler
+  href: /posts/euler/
+  tag:  euler
+
+- name: Meta
+  href: /posts/meta/
+  tag:  meta

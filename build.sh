@@ -1,14 +1,16 @@
 #!/bin/sh
 set -e
 
+# Golang unit tests and compiling
 cd go
 ./build.sh
 cd ..
 
-# cd site
-# ./build.sh
-# cd ..
+# Jekyll building
+cd site
+./build.sh
+cd ..
 
-# if branch master - deploy
+# TODO - if branch master - deploy
 
 echo "Turing Mechanic Build Complete"

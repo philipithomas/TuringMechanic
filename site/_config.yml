@@ -1,0 +1,31 @@
+exclude: [
+    'config.yml',
+    'vendor', # CircleCI-specific bug
+    'Gemfile*',
+    '*.sh'
+]
+
+highlighter: pygments
+permalink: /:title/
+name: Turing Mechanic
+url: 'https://www.TuringMechanic.com'
+description: Algorithms in GoLang
+twitter: TuringMechanic
+copyright: All rights reserved.
+rss_path: /
+rss_name: rss.xml
+assets:
+  dirname: assets
+  baseurl: /assets/
+  css_compressor: yui
+  js_compressor: yui
+  cachebust: hard
+  cache: false
+  debug: true
+  gzip: nil # Cloudflare will do this
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/images
+
+favicon: '' # TODO - base64 encode
