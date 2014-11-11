@@ -1,21 +1,45 @@
 
-@background-card-height: 500px;
+@background-card-height: 100%;
 @content-card-height: 500px;
 
 body {
-    #bg-card {
-        width: 100%;
-        margin: 0;
-        border: 0;
-        padding: 0;
-        height: @background-card-height;
-        background-color: @brand-primary;
+    background-color: @brand-primary;
+}
+
+#header {
+    a {
+        color: white;
+        &:hover {
+            text-decoration: none;
+        }
     }
-    #content-card {
-        background-color: white;
-        min-height: @content-card-height;
-        margin-top: 50px;
-        -webkit-box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-        box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+    .subtitle {
+        color: @gray-light;
     }
+}
+
+#content-card {
+    background-color: white;
+    min-height: @content-card-height;
+    margin-top: 15px;
+    -webkit-box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+    box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+
+#footer {
+    margin-top: 50px;
+    color: white;
+    a {
+        color: @gray-lighter;
+    }
+}
+
+.page-header {
+    border: 0;
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
 }

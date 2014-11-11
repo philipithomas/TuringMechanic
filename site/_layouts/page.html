@@ -1,11 +1,11 @@
 ---
 layout: main
 ---
-<article>
-    <header>
-        <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
-    </header>
+<div class="page-header">
+    {% if page.code %}
+    <a href="{{ site.code-base }}{{page.code}}" class="btn btn-info pull-right">Source Code</a>
+    {% endif %}
+    <a href="{{ page.url }}"><h1>{{ page.title}}</h1></a>
+</div>
 
-    {{ content }}
-
-</article>
+{{ content }}

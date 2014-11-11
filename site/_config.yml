@@ -7,13 +7,16 @@ exclude: [
 
 ]
 
-highlighter: pygments
+highlighter: pygment
 permalink: /:title/
 name: Turing Mechanic
 url: 'https://www.TuringMechanic.com'
+author: Philip I. Thomas
+author_url: https://www.philipithomas.com
 description: Algorithms in GoLang
 twitter: TuringMechanic
-copyright: All rights reserved.
+github: https://github.com/philipithomas/TuringMechanic/tree/master
+copyright: All rights reserved
 rss_path: /
 rss_name: rss.xml
 assets:
@@ -31,3 +34,4 @@ assets:
     - _assets/images
 
 favicon: '' # TODO - base64 encode
+code-base: https:/github.com/philipithomas/TuringMachine/tree/master/go/

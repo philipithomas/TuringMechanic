@@ -1,10 +1,19 @@
 ---
 layout: default
 ---
-<div id="bg-card">
-    <div class="container" id="main-container">
-        <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" id="content-card">
-            foo
-        </div>
+<div class="container" id="header">
+    <div id="header" class="h3">
+        <a href="/">
+            <img src="/images/logo/header.png" id="logo" alt="logo" /> Turing Mechanic
+        </a>
     </div>
 </div>
+<div class="container" id="main-container">
+    <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" id="content-card">
+        {{ content }}
+    </div>
+</div>
+
+<footer class="container" id="footer">
+    &copy; {{ site.time | date: '%Y' }} <a href="/">{{ site.name }}</a>. {{ site.copyright }}. Go Gopher licensed from <a href="http://www.reneefrench.com/">Renee French</a> under a <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons 3.0 Attributions License</a>.
+</footer>
