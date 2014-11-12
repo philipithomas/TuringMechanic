@@ -46,7 +46,6 @@ func calculate() int {
     go emitFib(fibChan)
 
     return processFib(fibChan)
-
 }
 
 func main() {
