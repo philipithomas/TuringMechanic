@@ -33,4 +33,4 @@ assets:
     - _assets/images
 
 favicon: '' # TODO - base64 encode
-code-base: https:/github.com/philipithomas/TuringMechanic/tree/master/go/src/
+code-base: "https:/github.com/philipithomas/TuringMechanic/tree/master/go/src/"
