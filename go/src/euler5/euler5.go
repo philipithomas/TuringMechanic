@@ -26,6 +26,7 @@ func lcm(i, j int) int {
 }
 
 func calculate(max int) (lcmOut int) {
+    // What is the LCM of all integers between 1 and max, inclusive?
     lcmOut = 1
     for i:= 1; i<=max; i++ {
         lcmOut  = lcm(lcmOut, i)
@@ -34,6 +35,6 @@ func calculate(max int) (lcmOut int) {
 }
 
 func main() {
-    max := calculate(eulerMax)
-    fmt.Printf("The max palindrome formed by the multplication of two three-digit numbers is %d\n", max)
+    lcmOut := calculate(eulerMax)
+    fmt.Printf("The LCM of numbers from 1 to %d is %d\n", eulerMax, lcmOut)
 }

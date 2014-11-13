@@ -69,3 +69,10 @@ func TestProvidedEulerExample(t *testing.T) {
     }
 }
 
+func TestEulerAnser(t *testing.T) {
+    solution := 232792560
+    result := calculate(eulerMax)
+    if result != solution {
+        t.Errorf("Solution was incorrect. Correct: %d. Calculated: %d.", result, solution)
+    }
+}
