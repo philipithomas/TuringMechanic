@@ -27,8 +27,6 @@
 # Notes:
 #   1.) The last modified date is determined by the latest from the following:
 #       system modified date of the page or post, system modified date of
-#       included layout, system modified date of included layout within that
-#       layout, ...
 #
 # Author: Michael Levin
 # Site: http://www.kinnetica.com
