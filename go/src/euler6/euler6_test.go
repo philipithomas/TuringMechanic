@@ -19,6 +19,3 @@ func TestEulerSolution(t *testing.T) {
         t.Errorf("Example incorrect. Correct: %d. Calculated: %d.", out, expected)
     }
 }
-
-
-
