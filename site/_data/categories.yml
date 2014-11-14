@@ -1,6 +1,12 @@
 - name: Project Euler
   href: /posts/euler/
   tag:  euler
+  website: https://projecteuler.net/
+
+- name: Concurrency Patterns
+  href: /posts/concurrency/
+  tag: concurrency
+  book: http://www.amazon.com/gp/product/1937785653/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1937785653&linkCode=as2&tag=turingmechanic-20&linkId=OUTEJGGQMBDK2VMD
 
 - name: Meta
   href: /posts/meta/
