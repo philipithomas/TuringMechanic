@@ -20,21 +20,15 @@
 {% javascript jquery %}
 {% javascript bootstrap %}
 {% javascript retina %}
-{% javascript custom %}
+<script type="text/javascript"
+      src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 {% if page.header_insert %}
     {{ page.header_insert}}
-{% endif %}
-
-{% if page.latex %}
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-<script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-</script>
 {% endif %}
 
 <!-- Google Analytics -->
