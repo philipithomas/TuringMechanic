@@ -10,18 +10,9 @@ const (
 )
 
 func calculateAdjacent(digits int) (adjacentSum int64) {
-    haystack := []byte(num)
-
-    for i:=0; i<len(haystack); i++ {
+    for i:=0; i<=len(num)-digits; i++ {
         var needle []byte
-        if i + digits < len(haystack) {
-            // end index of needle in bounds
-            needle = append(needle, haystack[i:(i+digits)]...)
-        } else {
-            // we need to do some creative wraparound
-            needle = append(needle, haystack[i:]...)
-            needle = append(needle, haystack[:((i+digits) % len(haystack))]...)
-        }
+        needle = append(needle, num[i:i+digits]...)
 
         var testSum = int64(1)
         for j :=0; j<digits; j++ {
