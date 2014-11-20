@@ -12,7 +12,7 @@ func calculatePythagTripletSum(sum int) (int, error) {
     a, b, c := 1, 1, 1 // Starting point
     var err error
     for {
-        fmt.Printf("%d, %d, %d\n", a, b, c)
+        //fmt.Printf("%d, %d, %d\n", a, b, c)
         if a + b + c < sum {
             a, b, c, err = incrementTriplet(a, b, c)
             if err != nil {
@@ -42,30 +42,12 @@ func incrementTriplet(alpha, beta, gamma int) (a, b, c int, err error) {
         return
     }
 
-    // case not triangle small C
-    if a + b <= c {
-        for a + b <= c {
-            if a == b {
-                b++
-            } else {
-                a++
-            }
-        }
-        return
-    }
-
-    // case equilateral
-    if a == b && b == c {
-        c++
-        return
-    }
-
     // case small theta
     if a*a + b*b < c*c {
-        if b > a {
-            a++
-        } else {
+        if b + 1 != c {
             b++
+        } else {
+            a++
         }
         return
     }
@@ -76,15 +58,14 @@ func incrementTriplet(alpha, beta, gamma int) (a, b, c int, err error) {
         return
     }
 
-
     return 0, 0, 0, fmt.Errorf("Uncaught case %d, %d, %d", alpha, beta, gamma)
 }
 
 func main() {
-    eulerSum := 100
+    eulerSum := 1000
     answer, err := calculatePythagTripletSum(eulerSum)
     if err != nil {
         fmt.Printf("%s", err)
     }
-    fmt.Printf("The  product of the digits of a pythagorean triplet of %d is %d \n", eulerSum, answer)
+    fmt.Printf("The product of the digits of a pythagorean triplet of %d is %d \n", eulerSum, answer)
 }
