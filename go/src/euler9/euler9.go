@@ -24,8 +24,6 @@ func calculatePythagTripletSum(sum int) (int, error) {
         if math.Mod(a, 1) == 0 {
             return int(a * b * (n - a - b)), nil
         }
-        if a + b > n/2 {
-        }
     }
     return 0, fmt.Errorf("Sum %d does not appear to have a triplet", n)
 }

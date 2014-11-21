@@ -27,3 +27,11 @@ func TestTripletExample(t *testing.T) {
         t.Errorf("Incorrect answer")
     }
 }
+
+func TestWrongSumThrowsError(t *testing.T) {
+    sum := 5 + 12 + 13 + 1
+    _, err := calculatePythagTripletSum(sum)
+    if err == nil {
+        t.Errorf("Error not thrown for incorrect sum %d", sum)
+    }
+}
