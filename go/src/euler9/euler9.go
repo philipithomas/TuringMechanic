@@ -2,70 +2,41 @@ package main
 
 import (
     "fmt"
+    "math"
 )
 
-func isPythagTriplet(a, b, c int) bool {
-    return a*a + b*b == c*c
-}
-
 func calculatePythagTripletSum(sum int) (int, error) {
-    a, b, c := 1, 1, 1 // Starting point
-    var err error
-    for {
-        //fmt.Printf("%d, %d, %d\n", a, b, c)
-        if a + b + c < sum {
-            a, b, c, err = incrementTriplet(a, b, c)
-            if err != nil {
-                // panic because this shouldn't happen
-                panic(err)
-            }
-            continue
+    /*
+    See blog post for derivation - but basically, calculate required `b` given
+    an `a`, then see if a is an integer and if it matches the parameters.
+    */
+
+    // float64 so we can use math standard library
+    var a, b float64
+    n := float64(sum)
+
+    for b=1; b<n/2; b++ {
+        // Calculate required `a`
+        a = (2*b*n - n*n) / (2*b - 2*n)
+
+        // is `a` an integer?
+        // (built-in modulus doesn't work on floats)
+        if math.Mod(a, 1) == 0 {
+            return int(a * b * (n - a - b)), nil
         }
-        if isPythagTriplet(a, b, c) {
-            return a*b*c, nil
+        if a + b > n/2 {
         }
-        if a + b + c > sum {
-            // sum isn't possible
-            return 0, fmt.Errorf("No pythagorean triplet sums to %s", sum)
-        }
-        a, b, c, err = incrementTriplet(a, b, c)
     }
+    return 0, fmt.Errorf("Sum %d does not appear to have a triplet", n)
 }
 
-func incrementTriplet(alpha, beta, gamma int) (a, b, c int, err error) {
-    // input and output variables must be different :-(
-    a, b, c = alpha, beta, gamma
 
-    // case triplet:
-    if isPythagTriplet(a, b, c) {
-        a++; b++; c++
-        return
-    }
-
-    // case small theta
-    if a*a + b*b < c*c {
-        if b + 1 != c {
-            b++
-        } else {
-            a++
-        }
-        return
-    }
-
-    // case small theta
-    if a*a + b*b > c*c {
-        c++
-        return
-    }
-
-    return 0, 0, 0, fmt.Errorf("Uncaught case %d, %d, %d", alpha, beta, gamma)
-}
 
 func main() {
     eulerSum := 1000
     answer, err := calculatePythagTripletSum(eulerSum)
     if err != nil {
-        fmt.Printf("%s", err)
+        panic ("No answer found")
     }
     fmt.Printf("The product of the digits of a pythagorean triplet of %d is %d \n", eulerSum, answer)
 }
