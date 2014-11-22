@@ -6,38 +6,37 @@ import (
 
 var (
     eulerLim int = 2*10e6
-    chanLim int = 10
 )
-
-func emit(ch chan<- int) {
-    for i:=2; ; i++ {
-        ch <- i
-    }
-}
-
-func filter(in <-chan int, out chan<- int, prime int) {
-    for {
-        i := <-in
-        if i%prime != 0 {
-            out <- i
-        }
-    }
-}
 
 
 func primeSum(lim int)  (sum int64) {
-    chEmit := make(chan int)
-    go emit(chEmit)
+    // False means prime at output
+    sieve := make([]bool, lim)
+
+    // Not a prime
+    sieve[1] = true
+
+    prime := 2
     for {
-        prime := <-chEmit
-        fmt.Printf("%d\n", prime)
-        if prime > lim {
-            return
-        }
         sum += int64(prime)
-        chReceive := make(chan int)
-        go filter(chEmit, chReceive, prime)
-        chEmit = chReceive
+        // Get rid of multiples of prime
+        for i:=1; i< lim; i++ {
+            if i % prime == 0 {
+                sieve[i] = true
+            }
+        }
+
+        // Find next prime
+        for {
+            prime++
+            if prime == lim {
+                return
+            }
+            if sieve[prime] == false {
+                // found next prime
+                break
+            }
+        }
     }
 }
 
