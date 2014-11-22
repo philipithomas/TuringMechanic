@@ -5,7 +5,7 @@ import (
 )
 
 var (
-    eulerLim int = 2*10e6
+    eulerLim int = 2000000
 )
 
 
@@ -14,13 +14,14 @@ func primeSum(lim int)  (sum int64) {
     sieve := make([]bool, lim)
 
     // Not a prime
+    sieve[0] = true
     sieve[1] = true
 
     prime := 2
     for {
         sum += int64(prime)
         // Get rid of multiples of prime
-        for i:=1; i< lim; i++ {
+        for i:=prime; i<lim; i=i+prime {
             if i % prime == 0 {
                 sieve[i] = true
             }
