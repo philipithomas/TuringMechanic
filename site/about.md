@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-As a project while learning the [Go Programming Language](http://golang.org), I am writing a blog post every day about solving a challenge or building an algorithm in Go. [Fork the website on Github]({{ site.github }}).
+As a project while learning the [Go Programming Language](http://golang.org), I am writing a blog post every day about solving a challenge or building an algorithm in Go. [Fork the website on Github]({{ site.github }}), or follow the posts on <a href="{{ site.twitter_url}}">Twitter</a> and <a href="{{ site.facebook_url}}">Facebook</a>.
 
 You can reach me at [mail@philipithomas.com](mailto:mail@philipithomas.com) or on Twitter as [@philipithomas](https://twitter.com/philipithomas).
 

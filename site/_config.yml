@@ -12,8 +12,10 @@ name: Turing Mechanic
 url: 'https://www.TuringMechanic.com'
 author: Philip I. Thomas
 author_url: https://www.philipithomas.com
-description: Algorithms in GoLang
+description: An Algorithm a Day in Go
 twitter: TuringMechanic
+twitter_url: https://twitter.com/turingmechanic
+facebook_url: https://facebook.com/TuringMechanic
 github: https://github.com/philipithomas/TuringMechanic/tree/master
 copyright: All rights reserved
 rss_path: /
