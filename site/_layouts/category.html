@@ -1,0 +1,33 @@
+---
+layout: main
+permalink: /
+---
+{% for cat in site.data.categories %}
+    {% if page.category == cat.tag %}
+        {% assign category = cat %}
+    {% endif %}
+{% endfor %}
+
+<header class="page-header">
+    <a href="{{ page.url }}"><h1>Posts - {{ category.name }}</h1></a>
+</header>
+
+<p class="lead">
+{{ category.description }}
+</p>
+
+<table id="posts" class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Post</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for post in site.posts %}
+        {% if post.category == category.tag %}
+            <tr><td class="right">{{ post.date | date: "%e %B %Y" }}</td><td><a href="{{ post.url }}">{{ post.title }}</a></td></tr>
+          {% endif %}
+    {% endfor %}
+    </tbody>
+</table>

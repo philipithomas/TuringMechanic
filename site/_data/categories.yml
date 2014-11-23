@@ -1,13 +1,19 @@
 - name: Project Euler
   href: /posts/euler/
   tag:  euler
-  website: https://projecteuler.net/
+  description: Implementing algorithms to solve problems from <a href="http://projecteuler.net">Project Euler</a>, a collection of programming challenges.
 
 - name: Concurrency Patterns
   href: /posts/concurrency/
   tag: concurrency
-  book: http://www.amazon.com/gp/product/1937785653/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1937785653&linkCode=as2&tag=turingmechanic-20&linkId=OUTEJGGQMBDK2VMD
+  description: Implementing algorithms from the book <a href="http://www.amazon.com/gp/product/1937785653/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1937785653&linkCode=as2&tag=turingmechanic-20&linkId=OUTEJGGQMBDK2VMD">7 Concurrency Patterns in 7 weeks</a>.
+
+- name: Algorithm Design Manual
+  href: /posts/algorithm-design-manual/
+  tag: adm
+  description: Implmentations of algorithms described in <a href="http://www.amazon.com/gp/product/1848000693/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1848000693&linkCode=as2&tag=turingmechanic-20&linkId=IIA5B5BWY5B5JETD">The Algorithm Design Manual</a> by Steven S. Skiena.
 
 - name: Meta
   href: /posts/meta/
   tag:  meta
+  description: Posts about <a href="/">Turing Mechanic</a>.

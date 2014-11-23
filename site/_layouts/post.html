@@ -17,7 +17,12 @@ categories: true
     <a href="{{ site.code-base }}{{page.code}}" class="btn btn-info btn-sm pull-right">Source Code</a>
     {% endif %}
     {% if page.category %}
-        Posted in <em>{{page.category}}</em>
+        {% for cat in site.data.categories %}
+            {% if page.category == cat.tag %}
+                {% assign category = cat %}
+            {% endif %}
+        {% endfor %}
+        Posted in <a class="btn btn-success btn-xs" href="{{ category.href }}">{{category.name}}</a>
     {% endif %}
     </small>
 </article>
