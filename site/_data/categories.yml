@@ -17,3 +17,8 @@
   href: /posts/meta/
   tag:  meta
   description: Posts about <a href="/">Turing Mechanic</a>.
+
+- name: Systems
+  href: /posts/systems/
+  tag:  systems
+  description: Posts about solving generic systems problems.
