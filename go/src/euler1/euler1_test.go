@@ -1,16 +1,16 @@
 package main
 
 import (
-    "testing"
+	"testing"
 )
 
 const (
-    solution = 233168
+	solution = 233168
 )
 
 func TestCalculate(t *testing.T) {
-    result := calculate()
-    if result != solution {
-        t.Errorf("Solution was incorrect. Correct: %d. Calculated: %d.", result, solution)
-    }
+	result := calculate()
+	if result != solution {
+		t.Errorf("Solution was incorrect. Correct: %d. Calculated: %d.", result, solution)
+	}
 }
