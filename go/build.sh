@@ -6,7 +6,7 @@ export GOPATH=`pwd`
 cd src
 for f in */ ; do
    cd $f
-   if `ls -l *.go | wc -l`>0; then
+   if [ `git ls-files * | wc -l` -gt 0 ]; then
        echo "Checking formatting in ${f}"
        count=`git ls-files | grep '.go$' | xargs gofmt -l | wc -l`
        if [ $count -gt 0 ]; then
