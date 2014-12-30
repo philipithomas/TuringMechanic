@@ -1,3 +1,4 @@
 language: go
+sudo: false # Use Containers
 go:
   - 1.4
