@@ -13,6 +13,7 @@ for f in */ ; do
            echo "Some files are not formatted. run prettify.sh\n"
            exit 1
        fi
+       go vet .
        echo "Building ${f}"
        go test -v
        go install -v

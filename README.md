@@ -1,4 +1,5 @@
 # Turing Mechanic
+
 ## A Blog on Algorithms in the Go Programming Language
 
 [![Build Status](https://travis-ci.org/philipithomas/TuringMechanic.svg)](https://travis-ci.org/philipithomas/TuringMechanic)
