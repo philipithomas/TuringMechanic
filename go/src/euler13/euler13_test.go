@@ -11,6 +11,6 @@ const (
 func TestCalculate(t *testing.T) {
 	result := calculate()
 	if result != solution {
-		t.Errorf("Solution was incorrect. Correct: %d. Calculated: %d.", solution, result)
+		t.Errorf("Solution was incorrect. Correct: %s. Calculated: %s.", solution, result)
 	}
 }

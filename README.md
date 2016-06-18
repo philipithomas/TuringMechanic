@@ -1,7 +1,8 @@
 # Turing Mechanic
+
 ## A Blog on Algorithms in the Go Programming Language
 
-[![Build Status](https://travis-ci.org/philipithomas/TuringMechanic.svg)](https://travis-ci.org/philipithomas/TuringMechanic)
+[![Build Status](https://travis-ci.org/philipithomas/TuringMechanic.svg)](https://travis-ci.org/philipithomas/TuringMechanic) [![Go Report Card](https://goreportcard.com/badge/github.com/philipithomas/TuringMechanic)](https://goreportcard.com/report/github.com/philipithomas/TuringMechanic)
 
 
 ## Credits

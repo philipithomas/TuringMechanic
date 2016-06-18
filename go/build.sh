@@ -8,11 +8,12 @@ for f in */ ; do
    cd $f
    if [ `git ls-files * | wc -l` -gt 0 ]; then
        echo "Checking formatting in ${f}"
-       count=`git ls-files | grep '.go$' | xargs gofmt -l | wc -l`
+       count=`git ls-files | grep '.go$' | xargs gofmt -l -s | wc -l`
        if [ $count -gt 0 ]; then
            echo "Some files are not formatted. run prettify.sh\n"
            exit 1
        fi
+       go vet .
        echo "Building ${f}"
        go test -v
        go install -v
