@@ -15,8 +15,8 @@ for f in */ ; do
        fi
        go vet .
        echo "Building ${f}"
-       go test -v
-       go install -v
+       go test -race -v
+       go install -race -v
    fi
    cd ..
 done
